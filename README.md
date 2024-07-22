@@ -34,4 +34,4 @@
   --ss-rows: 2;
 }</code>
 <p>HTML</p>
-<code><a data-sprite="0:0" class="contact" href="#">&nbsp;</a></code>
+<code>&lt;a data-sprite="0:0" class="contact" href="#"&gt;&nbsp;&lt;/a&gt;</code>
