@@ -1,11 +1,11 @@
 <?php
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'WD Base',
+    'title' => 'WDBase',
     'description' => 'Webdev Siegen Basis Extension',
     'category' => 'fe',
     'author' => 'Florian Kühl',
     'author_email' => 'support@webdev-siegen.de',
-    'author_company' => 'Florian Kühl Webdesign',
+    'author_company' => 'Florian Kühl Webentwicklung',
     'state' => 'stable',
     'version' => '1.0.0',
     'constraints' => [
