@@ -1,5 +1,5 @@
 <h1>WDBase Typo3 Extension</h1>
-<p>This extension contains a basic generalised structure for starting development of a Typo3 website.</p>
+<p>This extension contains a basic generalised structure for starting development of a Typo3 12 website.</p>
 <p>Includes:</p>
 <ul>
   <li>Basic layout, templates and partials</li>
