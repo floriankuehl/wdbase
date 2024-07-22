@@ -8,7 +8,7 @@
       <li>Typo3 Template for easy inclusion</li>
       <li>FLUIDTEMPLATE with menuRenderer</li>
       <li>PAGE instance wd.page</li>
-      <li>Constants for company details, access via settings.address</li>
+      <li>Constants for company details, access via <code>{settings.address}</code></li>
     </ul>
   </li>
   <li>Social footer with schema for Organization</li>
