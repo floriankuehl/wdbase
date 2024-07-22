@@ -1,7 +1,7 @@
 <?php
 $EM_CONF[$_EXTKEY] = [
     'title' => 'WDBase',
-    'description' => 'Webdev Siegen Basis Extension',
+    'description' => 'Base-Extension for the main template. Contains typoscript and a basic template structure.',
     'category' => 'fe',
     'author' => 'Florian Kühl',
     'author_email' => 'support@webdev-siegen.de',
