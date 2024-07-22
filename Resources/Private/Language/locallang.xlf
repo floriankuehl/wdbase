@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="de" datatype="plaintext" original="EXT:wdbase/Resources/Private/Language/locallang.xlf" date="2023-08-08T09:00:00Z" product-name="wdbase">
+  <file source-language="de" datatype="plaintext" original="EXT:wdbase/Resources/Private/Language/locallang.xlf" date="2024-06-12T19:35:00Z" product-name="wdbase">
     <header/>
     <body>
       <trans-unit id="days.monday" resname="days.monday">
