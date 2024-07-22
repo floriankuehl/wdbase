@@ -35,4 +35,4 @@
 }</code>
 <p>HTML</p>
 <code>&lt;a data-sprite="0:0" class="btn contact" title="Follow on portal A" href="#"&gt;&amp;nbsp;&lt;/a&gt;
-  &lt;a data-sprite="1:0" class="btn contact"  title="Follow on portal B" href="#"&gt;&amp;nbsp;&lt;/a&gt;</code>
+&lt;a data-sprite="1:0" class="btn contact"  title="Follow on portal B" href="#"&gt;&amp;nbsp;&lt;/a&gt;</code>
