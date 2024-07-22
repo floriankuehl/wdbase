@@ -23,15 +23,18 @@
 </ul>
 
 <h2>Spriteset Example</h2>
-<p></p>
+<p>CSS</p>
 <code>.contact[data-sprite] {
   background-image: url(../Images/spriteset.png);
-  --ss-width: 2.5rem;
-  --ss-height: 2.5rem;
+  --ss-width: 2.5rem; # render width
+  --ss-height: 2.5rem; # render height
   --ss-offset-x: 0px;
-  --ss-offset-y: 0px;
+  --ss-offset-y: 0px; 
   --ss-cols: 10;
   --ss-rows: 2;
 }</code>
 <p>HTML</p>
-<code>&lt;a data-sprite="0:0" class="contact" href="#"&gt;&nbsp;&lt;/a&gt;</code>
+<code>
+  &lt;a data-sprite="0:0" class="btn contact" title="Follow on portal A" href="#"&gt;&amp;nbsp;&lt;/a&gt;
+  &lt;a data-sprite="1:0" class="btn contact"  title="Follow on portal B" href="#"&gt;&amp;nbsp;&lt;/a&gt;
+</code>
