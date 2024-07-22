@@ -1,0 +1,11 @@
+<ul class="navbar-nav flex-wrap gap-3">
+<f:for each="{menu}" as="item">
+  <li class="nav-item">
+    <a 
+      class="nav-link{f:if(condition:item.active,then:' active')}" 
+      href="{item.link}" 
+      rel="me index follow"
+    >{item.title}</a>
+  </li>
+</f:for>
+</ul>

@@ -1,0 +1,13 @@
+<header class="d-flex flex-column shadow bg-white mb-3">
+  <div class="content d-flex flex-row flex-wrap">
+    <f:render partial="Logo" arguments="{_all}" />
+    <div class="col-12 col-md-4 d-flex align-items-center">
+      
+    </div>
+    <nav id="main-navigation" class="navbar navbar-expand border-top justify-content-around col-12 p-0">
+      <f:if condition="{data.uid} != 1">
+        {mainMenu->f:format.raw()}
+      </f:if>
+    </nav>
+  </div>
+</header>

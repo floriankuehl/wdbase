@@ -1,0 +1,26 @@
+.mi {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: var(--mi-icon-size);
+  color: var(--bs-dark);
+  display: inline-block;
+  text-decoration:none;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+  cursor:pointer;
+  transition: color .5s;
+}
+
+.mi-outline { font-family: 'Material Icons Outlined' }
+.mi-round { font-family: 'Material Icons Round' }
+.mi-sharp { font-family: 'Material Icons Sharp' }
+.mi.active, .mi:hover { color: var(--color-brand) }

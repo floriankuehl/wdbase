@@ -1,0 +1,194 @@
+wd.address {
+  company = {$wd.address.company}
+  type = {$wd.address.type}
+  street = {$wd.address.street}
+  houseno = {$wd.address.houseno}
+  zip = {$wd.address.zip}
+  city = {$wd.address.city}
+  country = {$wd.address.country}
+  phone = {$wd.address.phone}
+  phoneRaw = {$wd.address.phoneRaw}
+  fax = {$wd.address.fax}
+  faxRaw = {$wd.address.faxRaw}
+  email = {$wd.address.email}
+  emailRaw = {$wd.address.emailRaw}
+  
+  taxID = {$wd.address.taxID}
+  vatID = {$wd.address.vatID}
+  
+  slogan = {$wd.address.slogan}
+  logo = {$wd.address.logo}
+  
+  social {
+    facebook = {$wd.address.social.facebook}
+    youtube = {$wd.address.social.youtube}
+    twitter = {$wd.address.social.twitter}
+    linkedin = {$wd.address.social.linkedin}
+    instagram = {$wd.address.social.instagram}
+  }
+  
+  openingHours {
+    monday {
+      from = {$wd.address.openingHours.monday.from}
+      to = {$wd.address.openingHours.monday.to}
+    }
+    tuesday {
+      from = {$wd.address.openingHours.tuesday.from}
+      to = {$wd.address.openingHours.tuesday.to}
+    }
+    wednesday {
+      from = {$wd.address.openingHours.wednesday.from}
+      to = {$wd.address.openingHours.wednesday.to}
+    }
+    thursday {
+      from = {$wd.address.openingHours.thursday.from}
+      to = {$wd.address.openingHours.thursday.to}
+    }
+    friday {
+      from = {$wd.address.openingHours.friday.from}
+      to = {$wd.address.openingHours.friday.to}
+    }
+    saturday {
+      from = {$wd.address.openingHours.saturday.from}
+      to = {$wd.address.openingHours.saturday.to}
+    }
+    sunday {
+      from = {$wd.address.openingHours.sunday.from}
+      to = {$wd.address.openingHours.sunday.to}
+    }
+  }
+}
+
+wd.mainMenu = menu
+wd.mainMenu {
+  entryLevel = 1
+  levels = 1
+  as = menu
+  expandAll = 1
+  includeSpacer = 0
+  titleField = title
+}
+
+wd.contentElement =< lib.contentElement
+wd.contentElement {
+  templateRootPaths {
+    20 = {$wd.paths.menuRenderer}
+  }
+}
+
+tt_content {
+  wdbase_mainMenu =< wd.contentElement
+  wdbase_mainMenu {
+    templateName = Main
+    dataProcessing.10 < wd.mainMenu
+  }
+}
+
+wd.layout = CASE
+wd.layout {
+  key.data = levelfield:-1, backend_layout_next_level, slide
+  key.override.field = backend_layout
+  
+  default = TEXT
+  default.value = {$wd.paths.defaultTemplate}
+}
+
+wd.template = FLUIDTEMPLATE
+wd.template {   
+  layoutRootPaths {
+    0 = {$wd.paths.layout}
+  }
+  
+  partialRootPaths {
+    0 = {$wd.paths.partials}
+  }
+  
+  templateRootPaths {
+    0 = {$wd.paths.templates}
+  }
+  
+  variables {
+    mainMenu < tt_content.wdbase_mainMenu
+    
+    col1 < styles.content.get
+    col1.select.where = {#colPos}=1
+    col2 < styles.content.get
+    col2.select.where = {#colPos}=2
+    col3 < styles.content.get
+    col3.select.where = {#colPos}=3
+    col4 < styles.content.get
+    col4.select.where = {#colPos}=4
+  }
+  
+  file.stdWrap.cObject < wd.layout
+  
+  settings {
+    address < wd.address
+  }
+}
+
+wd.page = PAGE
+wd.page {
+  typeNum = 0
+  
+  config {
+    removeDefaultJS = external
+    index_externals = 0
+    disableImgBorderAttr = 1
+    disablePrefixComment = 1
+    
+    sendCacheHeaders = {$wd.page.live}
+    cache_period = {$wd.page.cachePeriod}
+    
+    concatenateCss = {$wd.page.live}
+    concatenateJs = {$wd.page.live}
+    compressCss = {$wd.page.live}
+    compressJs = {$wd.page.live}
+    
+    redirectOldLinksToNew = 1
+    prefixLocalAnchors = all
+    contentObjectExceptionHandler = 0
+    
+    language = {$wd.page.language}
+    locale_all = {$wd.page.locale}
+    htmlTag_setParams = lang="{$wd.address.countryShort}"
+    linkVars = L
+    
+    absRefPrefix = /
+    
+    pageRendererTemplateFile = {$wd.paths.pageRenderer}
+    noPageTitle = 0
+    showWebsiteTitle = 0
+  }
+  
+  includeCSSLibs {
+    bootstrap = {$wd.paths.css.bootstrap}
+    bootstrap {
+      disableCompression = 1
+      excludeFromConcatenation = 1
+    }
+  }
+  
+  includeCSS {
+    index = {$wd.paths.css.index}
+  }
+  
+  includeJSLibs {
+    
+  }
+  
+  includeJSFooterlibs {
+    
+  }
+  
+  includeFooterJS {
+    setup = EXT:wdbase/Resources/Public/Scripts/setup.js
+    setup {
+      type = module
+      disableCompression = 1
+      excludeFromConcatenation = 1
+    }
+  }
+  
+  10 < wd.template
+}

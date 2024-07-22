@@ -1,0 +1,15 @@
+<f:alias map="{address:settings.address}">
+  <f:link.page 
+    id="home"
+    pageUid="1" 
+    class="d-flex col-12 col-md-4 py-3"
+    title="{address.company} {address.type} - {address.slogan}"
+  >
+    <f:image 
+      src="{address.logo}"
+      height="100"
+      class="d-block col-12" 
+      alt="Logo {address.company} {address.type}"
+    />
+  </f:link.page>
+</f:alias>

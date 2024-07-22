@@ -1,0 +1,113 @@
+<f:section name="social">
+  <f:if condition="{address.social.{portal}}">
+  <a 
+    id="social-{portal}"
+    rel="opener external"
+    href="https://www.{f:translate(key:'social.{portal}.url',extensionName:'wdbase')}/{address.social.{portal}}" 
+    class="d-block rounded-circle contact" 
+    data-sprite="{sprite}"
+    title="{address.company} {f:translate(key:'social.{portal}.cta',extensionName:'wdbase',arguments:{0: address.company})}"
+    target="_blank"
+  >&nbsp;</a>
+  </f:if>
+</f:section>
+
+<f:section name="contact">
+  <f:variable name="raw" value="{medium}Raw" />
+  <f:if condition="{address.{raw}}">
+  <a 
+    id="contact-{medium}" 
+    title="{f:translate(key:'contact.{medium}.cta',extensionName:'wdbase')}"
+    href="{protocol}:{address.{raw}}" 
+    class="d-flex flex-row"
+  >
+    <span class="mi mi-outline me-3">{medium}</span>
+    <span itemprop="{itemprop}">{address.{medium}}</span>
+  </a>
+  </f:if>
+</f:section>
+
+<f:section name="openingHours">
+  <f:if condition="{to}">
+  <f:then>
+    <div class="d-flex flex-row">
+      <span class="col-4">
+        {f:translate(key:'days.{from}.short',extensionName:'wdbase')} - 
+        {f:translate(key:'days.{to}.short',extensionName:'wdbase')}
+      </span>
+      <span class="col-8">{address.openingHours.{from}.from} - {address.openingHours.{to}.to}</span>
+    </div>
+  </f:then>
+  <f:else>
+    <div class="d-flex flex-row">
+      <span class="col-4">
+        {f:translate(key:'days.{from}.short',extensionName:'wdbase')}
+      </span>
+      <span class="col-8">{address.openingHours.{from}.from} - {address.openingHours.{from}.to}</span>
+    </div>
+  </f:else>
+  </f:if>
+</f:section>
+
+<section 
+  id="contact" 
+  class="p-3 bg-light shadow"
+  alt="{f:translate(key:'contact.alt',extensionName:'rkbase')}"
+  itemscope 
+  itemtype="https://schema.org/Organization"
+>
+  <meta itemprop="url" content="{f:uri.page(pageUid:1,absolute:1)}" />
+  <meta itemprop="name" content="{address.company} {address.type}" />
+  <meta itemprop="slogan" content="{address.slogan}" />
+  <meta itemprop="taxID" content="{address.taxID}" />
+  <meta itemprop="vatID" content="{address.vatID}" />
+  
+  <div class="content d-flex flex-row flex-wrap">
+    <div class="col-12 col-md-6 col-lg-3 d-flex flex-column mb-3 mb-lg-0">
+      <f:image 
+        additionalAttributes="{itemprop:'logo'}"
+        src="{address.logo}"
+        height="100"
+        class="col-12 px-5 mb-3" 
+        title="{address.company} {address.type} - {address.slogan}"
+        alt="{address.company} {address.type} Logo"
+      />
+      <nav class="d-flex flex-row justify-content-around">
+        <f:render section="social" arguments="{address:address, portal:'facebook', sprite:'0:0'}" />
+        <f:render section="social" arguments="{address:address, portal:'youtube', sprite:'1:0'}" />
+        <f:render section="social" arguments="{address:address, portal:'twitter', sprite:'3:0'}" />
+        <f:render section="social" arguments="{address:address, portal:'linkedin', sprite:'4:0'}" />
+      </nav>
+    </div>
+    <address 
+      itemprop="address"
+      itemscope 
+      itemtype="https://schema.org/PostalAddress" 
+      class="col-12 col-md-6 col-lg-3 d-flex flex-column mb-3 mb-lg-0"
+    >
+      <meta itemprop="addressLocality" content="{address.city}, {address.country}">
+      <strong>{address.company} {address.type}</strong>
+      <div itemprop="streetAddress">{address.street} {address.houseno}</div>
+      <div>
+        <span itemprop="postalCode">{address.zip}</span> 
+        <span>{address.city}</span>
+      </div>
+      <span>{address.country}</span>
+    </address>
+    <div class="col-12 col-md-6 col-lg-3 d-flex flex-column mb-3 mb-lg-0" style="--mi-icon-size:1.75rem">
+      <strong>
+        {f:translate(key:'contact.label',extensionName:'wdbase')}
+      </strong>
+      <f:render section="contact" arguments="{address:address, medium:'phone', itemprop:'telephone', protocol:'tel'}" />
+      <f:render section="contact" arguments="{address:address, medium:'fax', itemprop:'faxNumber', protocol:'fax'}" />
+      <f:render section="contact" arguments="{address:address, medium:'email', itemprop:'email', protocol:'mailto'}" />
+    </div>
+    <div class="col-12 col-md-6 col-lg-3 d-flex flex-column">
+      <strong>
+        {f:translate(key:'contact.openingHours',extensionName:'wdbase')}
+      </strong>
+      <f:render section="openingHours" arguments="{address:address, from:'monday', to:'thursday'}" />
+      <f:render section="openingHours" arguments="{address:address, from:'friday'}" />
+    </div>
+  </div>
+</section>

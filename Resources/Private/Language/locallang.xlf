@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="de" datatype="plaintext" original="EXT:wdbase/Resources/Private/Language/locallang.xlf" date="2023-08-08T09:00:00Z" product-name="wdbase">
+    <header/>
+    <body>
+      <trans-unit id="days.monday" resname="days.monday">
+        <source>Montag</source>
+      </trans-unit>
+      <trans-unit id="days.monday.short" resname="days.monday.short">
+        <source>Mo</source>
+      </trans-unit>
+      <trans-unit id="days.tuesday" resname="days.tuesday">
+        <source>Dienstag</source>
+      </trans-unit>
+      <trans-unit id="days.tuesday.short" resname="days.tuesday.short">
+        <source>Di</source>
+      </trans-unit>
+      <trans-unit id="days.wednesday" resname="days.wednesday">
+        <source>Mittwoch</source>
+      </trans-unit>
+      <trans-unit id="days.wednesday.short" resname="days.wednesday.short">
+        <source>Mi</source>
+      </trans-unit>
+      <trans-unit id="days.thursday" resname="days.thursday">
+        <source>Donnerstag</source>
+      </trans-unit>
+      <trans-unit id="days.thursday.short" resname="days.thursday.short">
+        <source>Do</source>
+      </trans-unit>
+      <trans-unit id="days.friday" resname="days.friday">
+        <source>Freitag</source>
+      </trans-unit>
+      <trans-unit id="days.friday.short" resname="days.friday.short">
+        <source>Fr</source>
+      </trans-unit>
+      
+      <trans-unit id="contact.label" resname="contact.label">
+        <source>Kontakt</source>
+      </trans-unit>
+      <trans-unit id="contact.alt" resname="contact.alt">
+        <source>Kontakt zu %s</source>
+      </trans-unit>
+      <trans-unit id="contact.openingHours" resname="contact.openingHours">
+        <source>Geschäftszeiten</source>
+      </trans-unit>
+      <trans-unit id="contact.phone.label" resname="contact.phone.label">
+        <source>Tel.</source>
+      </trans-unit>
+      <trans-unit id="contact.phone.cta" resname="contact.phone.cta">
+        <source>Jetzt bei %s anrufen</source>
+      </trans-unit>
+      <trans-unit id="contact.fax.label" resname="contact.fax.label">
+        <source>Fax</source>
+      </trans-unit>
+      <trans-unit id="contact.fax.cta" resname="contact.fax.cta">
+        <source>Jetzt ein Fax an %s schicken</source>
+      </trans-unit>
+      <trans-unit id="contact.email.label" resname="contact.email.label">
+        <source>E-Mail</source>
+      </trans-unit>
+      <trans-unit id="contact.email.cta" resname="contact.email.cta">
+        <source>Jetzt eine E-Mail an %s schicken</source>
+      </trans-unit>
+      
+      <trans-unit id="social.facebook.url" resname="social.facebook.url">
+        <source>facebook.com</source>
+      </trans-unit>
+      <trans-unit id="social.facebook.cta" resname="social.facebook.cta">
+        <source>bei Facebook</source>
+      </trans-unit>
+      <trans-unit id="social.youtube.url" resname="social.youtube.url">
+        <source>youtube.com/channel</source>
+      </trans-unit>
+      <trans-unit id="social.youtube.cta" resname="social.youtube.cta">
+        <source>bei YouTube</source>
+      </trans-unit>
+      <trans-unit id="social.twitter.url" resname="social.twitter.url">
+        <source>twitter.com</source>
+      </trans-unit>
+      <trans-unit id="social.twitter.cta" resname="social.twitter.cta">
+        <source>bei Twitter</source>
+      </trans-unit>
+      <trans-unit id="social.linkedin.url" resname="social.linkedin.url">
+        <source>linkedin.com/company</source>
+      </trans-unit>
+      <trans-unit id="social.linkedin.cta" resname="social.linkedin.cta">
+        <source>bei LinkedIn</source>
+      </trans-unit>
+      
+      <trans-unit id="info.shipment" resname="info.shipment">
+        <source>Versandinformationen</source>
+      </trans-unit>
+      <trans-unit id="info.purchaseBill" resname="info.purchaseBill">
+        <source>Kauf auf Rechnung</source>
+      </trans-unit>
+      <trans-unit id="info.purchaseHire" resname="info.purchaseHire">
+        <source>Ratenkauf</source>
+      </trans-unit>
+      
+      <trans-unit id="label.search" resname="label.search">
+        <source>Suchen</source>
+      </trans-unit>
+      <trans-unit id="label.searchPlaceholder" resname="label.searchPlaceholder">
+        <source>Finde deinen Wunschartikel...</source>
+      </trans-unit>
+      
+    </body>
+  </file>
+</xliff>

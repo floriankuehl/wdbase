@@ -1,0 +1,144 @@
+# customcategory=wd=WDBase
+# customsubcategory=page=Page
+# customsubcategory=paths=Paths
+
+# customcategory=company=Company
+# customsubcategory=address=Address
+# customsubcategory=opening=Opening Hours
+# customsubcategory=social=Social Media
+
+wd {
+  
+  address {
+    # cat=company/address/a0; type=string; label=Company name
+    company =
+    # cat=company/address/a1; type=string; label=Company Type
+    type = 
+    # cat=company/address/a2; type=string; label=Street
+    street = 
+    # cat=company/address/a3; type=string; label=House no.
+    houseno = 
+    # cat=company/address/a4; type=string; label=Zip Code
+    zip = 
+    # cat=company/address/a5; type=string; label=City
+    city =
+    # cat=company/address/a6; type=string; label=Country
+    country =
+    # cat=company/address/a7; type=string; label=Country Code (2 letters)
+    countryShort =
+    # cat=company/address/a8; type=string; label=Phone
+    phone = 
+    # cat=company/address/b0; type=string; label=Phone Raw
+    phoneRaw = 
+    # cat=company/address/b1; type=string; label=Fax
+    fax = 
+    # cat=company/address/b2; type=string; label=Fax Raw
+    faxRaw = 
+    # cat=company/address/b3; type=string; label=Email address
+    email = 
+    # cat=company/address/b4; type=string; label=Raw E-Mail address
+    emailRaw = 
+    
+    # cat=company/address/c1; type=string; label=Tax ID
+    taxID = 
+    # cat=company/address/c2; type=string; label=Vat ID
+    vatID = 
+    # cat=company/address/c3; type=string; label=Slogan
+    slogan = 
+    # cat=company/address/c4; type=string; label=Logo
+    logo = EXT:wdbase/Resources/Public/Images/logo.svg
+    
+    social {
+      # cat=company/social/a1; type=string; label=Facebook Profile
+      facebook = 
+      # cat=company/social/a2; type=string; label=YouTube Channel
+      youtube = 
+      # cat=company/social/a3; type=string; label=Twitter Profile
+      twitter = 
+      # cat=company/social/a4; type=string; label=LinkedIn Profile
+      linkedin = 
+      # cat=company/social/a5; type=string; label=Instagram Profile
+      instagram = 
+    }
+    
+    openingHours {
+      
+      monday {
+        # cat=company/opening/a1; type=string; label=Monday from
+        from = 00:00
+        # cat=company/opening/a2; type=string; label=Monday to
+        to = 00:00
+      }
+      tuesday {
+        # cat=company/opening/b1; type=string; label=Tuesday from
+        from = 00:00
+        # cat=company/opening/b2; type=string; label=Tuesday to
+        to = 00:00
+      }
+      wednesday {
+        # cat=company/opening/c1; type=string; label=Wednesday from
+        from = 00:00
+        # cat=company/opening/c2; type=string; label=Wednesday to
+        to = 00:00
+      }
+      thursday {
+        # cat=company/opening/d1; type=string; label=Thursday from
+        from = 00:00
+        # cat=company/opening/d2; type=string; label=Thursday to
+        to = 00:00
+      }
+      friday {
+        # cat=company/opening/e1; type=string; label=Friday from
+        from = 00:00
+        # cat=company/opening/e2; type=string; label=Friday to
+        to = 00:00
+      }
+      saturday {
+        # cat=company/opening/f1; type=string; label=Saturday from
+        from = 
+        # cat=company/opening/f2; type=string; label=Saturday to
+        to = 
+      }
+      sunday {
+        # cat=company/opening/g1; type=string; label=Sunday from
+        from = 
+        # cat=company/opening/g2; type=string; label=Sunday to
+        to = 
+      }
+    }
+  }
+  
+  page {
+    # cat=wd/page/a1; type=boolean; label=Live Mode
+    live = 0
+    # cat=wd/page/a2; type=string; label=Cache Period
+    cachePeriod = 86400
+    # cat=wd/page/a3; type=string; label=Language code
+    language = de
+    # cat=wd/page/a4; type=string; label=Full locale
+    locale = de_CH.utf8
+  }
+  
+  paths {
+    # cat=wd/paths/a1; type=string; label=Page Renderer Template
+    pageRenderer = EXT:wdbase/Resources/Private/Templates/Page.html
+    # cat=wd/paths/a2; type=string; label=Menu Renderer Template
+    menuRenderer = EXT:wdbase/Resources/Private/Templates/Menus
+    # cat=wd/paths/a3; type=string; label=Menu Renderer Template
+    defaultTemplate = EXT:wdbase/Resources/Private/Templates/Default.html
+    
+    # cat=wd/paths/b1; type=string; label=Layout Root Path
+    layout = EXT:wdbase/Resources/Private/Layouts
+    # cat=wd/paths/b2; type=string; label=Partial Root Path
+    partials = EXT:wdbase/Resources/Private/Partials
+    # cat=wd/paths/b3; type=string; label=Template Root Path
+    templates = EXT:wdbase/Resources/Private/Templates
+    
+    css {
+      # cat=wd/paths/c1; type=string; label=Bootstrap CSS Path
+      bootstrap = EXT:wdbase/Resources/Public/Styles/bootstrap.min.css
+      # cat=wd/paths/c2; type=string; label=Index CSS Path
+      index = EXT:wdbase/Resources/Public/Styles/index.css
+    }
+  }
+}
