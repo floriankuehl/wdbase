@@ -1,6 +1,11 @@
 <h1>WDBase Typo3 Extension</h1>
 <p>This extension contains a basic generalised structure for starting development of a Typo3 12 website.</p>
-<p>Includes:</p>
+<p>The goal of this extension is to provide a out-of-the-box website-kit to save time in Typo3 development.</p>
+
+<h2>Roadmap</h2>
+<p>More features and generalisations will be added in the future.</p>
+
+<h2>Included</h2>
 <ul>
   <li>Basic layout, templates and partials</li>
   <li>Typoscript
