@@ -20,6 +20,8 @@
   <li>CSS
     <ul>
       <li>Bootstrap 5.3</li>
+      <li>Bootstrap Icons</li>
+      <li>Material Icons</li>
       <li>Variable driven design</li>
       <li>Spriteset usage via HTML attribute <code>data-sprite["x:y"]</code>.</li>
     </ul>
